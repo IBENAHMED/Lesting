@@ -1,0 +1,15 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier-html": "npx prettier --write index.html",
+    "prettier-js": "npx prettier --write ./src/js/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.2.5"
+  }
+}

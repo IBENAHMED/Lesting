@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+
+    <!-- Image favicon -->
+    <link rel="icon" type="image/png" href="./public/favicon.ico" />
+
+    <!-- Link File CSS -->
+    <link rel="stylesheet" href="src/assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="player">
+        <div class="details">
+          <div class="now-playing">PLAYING x OF y</div>
+          <div class="track-art"></div>
+          <h1 class="track-name">Track Name</h1>
+          <div class="track-artist">Track Artist</div>
+        </div>
+
+        <div class="slider_container">
+          <span class="current-time">00:00</span>
+          <input
+            type="range"
+            min="1"
+            max="30"
+            value="0"
+            class="seek_slider"
+            onchange="seekTo()"
+          />
+          <span class="total-duration">00:00</span>
+        </div>
+
+        <div class="slider_container">
+          <i class="fa fa-volume-down"></i>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="99"
+            class="volume_slider"
+            onchange="setVolume()"
+          />
+          <i class="fa fa-volume-up"></i>
+        </div>
+        <ul class="buttons">
+          <li class="random-track">
+            <i class="fas fa-random fa-2x" title="random"></i>
+          </li>
+          <li class="prev-track">
+            <i class="fa fa-step-backward fa-2x"></i>
+          </li>
+          <li class="playpause-track"></li>
+          <li class="next-track">
+            <i class="fa fa-step-forward fa-2x"></i>
+          </li>
+          <li class="repeat-track">
+            <i class="fa fa-repeat fa-2x" title="repeat"></i>
+          </li>
+        </ul>
+        <div id="loader" class="loader">
+          <div class="wave" id="wave">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+          </div>
+        </div>
+      </div>
+      <div class="ListMusicAudio">
+        <audio src="./src/assets/music/Faded.mp3"></audio>
+        <audio src="./src/assets/music/fallingdown.mp3"></audio>
+        <audio src="./src/assets/music/Rather Be.mp3"></audio>
+        <audio src="./src/assets/music/stay.mp3"></audio>
+      </div>
+    </div>
+
+    <!-- link file JS -->
+    <script src="./src/js/index.js" defer></script>
+  </body>
+</html>

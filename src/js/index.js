@@ -129,6 +129,8 @@ function toggleMusic(showIcon, hideIcon) {
 function changeMusic() {
     currTrack.src = musicList[trackIndex].music;
     nowPlaying.innerHTML = `PLAYING ${trackIndex + 1} OF ${musicList.length}`;
+    trackArtist.textContent = musicList[trackIndex].artist;
+    trackName.textContent = musicList[trackIndex].name;
 }
 
 function next() {
